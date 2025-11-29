@@ -1,0 +1,20 @@
+server:
+  port: 8082
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongodb-inventory:27017/inventorydb
+
+  kafka:
+    consumer:
+      bootstrap-servers: kafka:9092
+      group-id: inventory-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: "*"
+
+    listener:
+      missing-topics-fatal: false

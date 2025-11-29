@@ -1,0 +1,20 @@
+# Maven build output
+target/
+
+# Java compiled files
+*.class
+
+# Maven artifacts
+*.jar
+*.war
+*.ear
+
+# VS Code settings
+.vscode/
+
+# Logs
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
